@@ -1,0 +1,86 @@
+/*bouton diapo*/
+.bouton {
+    display: inline-block;
+    padding: 10px 14px;
+    font-size: 16px;
+    color: darkblue;
+    background-color: #111; /* Couleur de fond du bouton */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animation pour changement de couleur */
+}
+
+.bouton:hover {
+    background-color: #333;
+}
+        .slideshow-container {
+            position: relative;
+            max-width: 200px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+  
+
+        /* Images du diapo */
+        .slide img {
+            display: block;
+            width: 100%; 
+            height: auto; 
+        }
+        /* Boutons "précédent" et "suivant" */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 60%;
+            width: auto;
+            margin-top: -22px;
+            padding: 12px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            transition: 0.3s;
+        }
+
+
+        .prev {
+            left: 10px; /* ajouter espace à gauche */
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .next {
+            right: 0px; /* ajouter espace à droite */
+            border-radius: 0 3px 3px 0;
+        }
+        
+
+        /* Ajout couleursde fond semi-transparentes aux boutons */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Points de navigation */
+        .dot-container {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #717171;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .active, .dot:hover {
+            background-color: #ffd700;
+        }

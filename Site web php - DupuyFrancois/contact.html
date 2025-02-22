@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - François Dupuy</title>
+    <link rel="stylesheet" href="styles/Header.css">
+    <link rel="stylesheet" href="styles/Image.css">
+    <link rel="stylesheet" href="styles/FormulaireContact.css">
+    <link rel="stylesheet" href="styles/animated-background.css"> 
+    <link rel="stylesheet" href="styles/contact.css"> 
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="buton">Accueil</a></li>
+                <li><a href="profil.html" class="buton">Profil</a></li>
+                <li><a href="parcours.html" class="buton">Parcours</a></li>
+                <li><a href="competences.html" class="buton">Mes competences</a></li>
+                <li><a href="contact.html" class="buton active">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="clock" id="clock">00:00:00</div>
+
+    </header>
+   
+   
+    <div class="background"></div>
+
+    </main>
+
+    <div id="message-status">
+        <div class="success-message" style="display: none;">Message envoyé avec succès!</div>
+        <div class="error-message" style="display: none;"></div>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Restons en contact</h2>
+            <p>N'hésitez pas à me contacter via ce formulaire pour :</p>
+            <ul>
+                <li>Des opportunités professionnelles</li>
+                <li>Des collaborations sur des projets</li>
+                <li>Des questions sur mon parcours</li>
+                <li>Toute autre demande</li>
+            </ul>
+            <p>Je vous répondrai dans les plus brefs délais.</p>
+            <div class="contact-highlight">
+                <p>✉️ Une réponse sous 48h garantie</p>
+                <p>🤝 Ouvert aux propositions professionnelles</p>
+                <p>💡 Intéressé par de nouveaux défis</p>
+            </div>
+        </div>
+    </div>
+
+   
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const status = urlParams.get('status');
+            const message = urlParams.get('message');
+            
+            const successDiv = document.querySelector('.success-message');
+            const errorDiv = document.querySelector('.error-message');
+            
+            if (status === 'success') {
+                successDiv.style.display = 'block';
+                errorDiv.style.display = 'none';
+            } else if (status === 'error') {
+                errorDiv.textContent = message || "Une erreur s'est produite lors de l'envoi du message.";
+                errorDiv.style.display = 'block';
+                successDiv.style.display = 'none';
+            }
+        };
+    </script>
+
+    <style>
+      
+    </style>
+    <form action="php/process_contact.php" method="post">
+        <h1>Contactez-moi</h1>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Sujet :</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Envoyer</button>
+    </form>
+    
+</body>
+<footer>
+    <h4>&copy; 2025 Designed by DUPUY François</h4>
+</footer>
+<script src="Javascript/clock.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>  <!-- Ajoutez avant la fermeture du body -->
+    <script src="Javascript/particles-config.js"></script> 
+
+</html>

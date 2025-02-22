@@ -1,0 +1,123 @@
+.main-content {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.skill-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.skill-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.slideshow-container {
+    width: 90%; /* Plus large, prend 90% de la largeur disponible */
+    max-width: 1200px; /* Largeur maximale pour les grands écrans */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 20px;
+    position: relative;
+}
+
+.skill-image {
+    max-width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.skill-image:hover {
+    transform: scale(1.1);
+}
+
+.skill-details {
+    max-width: 400px;
+}
+
+.skill-details h3 {
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+.skill-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-list li {
+    margin: 10px 0;
+    padding: 8px;
+    background-color: #f7f9fc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.skill-list li:hover {
+    background-color: #e3e8f0;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+/* Améliorations pour les boutons de navigation */
+.prev, .next {
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Style des points de navigation */
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #555;
+}
+
+.dot.active {
+    background-color: #333;
+    transform: scale(1.2);
+}
+
+
+.skills-section {
+    margin-bottom: 80px;
+}
+
+.skills-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Espacement entre les diaporamas */
+.skills-section + .skills-section {
+    margin-top: 100px;
+    padding-top: 40px;
+    border-top: 2px solid #eee;
+}

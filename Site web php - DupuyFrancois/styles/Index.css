@@ -1,0 +1,234 @@
+
+/* Styles de base */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    border: 2px solid #4a90e2;
+    padding: 20px 40px;
+    border-radius: 15px;
+    color: #2c3e50;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 
+        0 0 20px rgba(74, 144, 226, 0.3),
+        inset 0 0 15px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    from {
+        text-shadow: 0 0 5px #4a90e2, 0 0 10px #4a90e2;
+        transform: scale(1);
+    }
+    to {
+        text-shadow: 0 0 15px #4a90e2, 0 0 25px #4a90e2;
+        transform: scale(1.02);
+    }
+}
+
+p {
+    border: 2px solid #4a90e2;
+    padding: 15px 30px;
+    border-radius: 12px;
+    color: #2c3e50;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 
+        0 0 15px rgba(74, 144, 226, 0.2),
+        inset 0 0 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin: 15px auto;
+    max-width: 600px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+p:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 5px 20px rgba(74, 144, 226, 0.3),
+        inset 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Style pour contenu principal */
+main {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*  animation de fondu à l'entrée */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, p {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+
+.map-container {
+    position: relative;
+    z-index: 2;
+    margin: 2rem auto;
+    margin-top: 600px; /* Distance fixe depuis le haut */
+    max-width: 1200px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.highlight-zone {
+    position: absolute;
+    background: rgba(74, 144, 226, 0.1);
+    border: 2px solid rgba(74, 144, 226, 0.3);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.highlight-zone:hover {
+    background: rgba(74, 144, 226, 0.2);
+    border-color: #4a90e2;
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.4);
+    transform: scale(1.05);
+}
+
+.zone1 /*competence*/  { 
+    top: 65%;
+    left: 72%;
+    width: 16%;
+    height: 21%;
+}
+
+.zone2 /*contact*/ {
+    top: 45%;
+    left: 72%;
+    width: 7%;
+    height: 19%;
+}
+
+.zone3 /*profil*/ {
+    top: 50%;
+    left: 5%;
+    width: 24%;
+    height: 35%;
+    
+}
+
+.zone4 /*parcours*/ {
+    top: 15%;
+    left: 30%;
+    width: 38%;
+    height: 70%;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.img:hover {
+    transform: scale(1.02);
+}
+
+
+main {
+    padding: 70px 15px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position au-dessus du mot */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+#hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+
+/* Zones interactives */
+.highlight-zone {
+    position: absolute;
+    border: 2px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Survol des zones */
+.highlight-zone:hover {
+    border-color: rgba(0, 128, 255, 0.7);
+    background-color: rgba(0, 128, 255, 0.5);
+}
+

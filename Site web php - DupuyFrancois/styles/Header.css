@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #444;
+    color: white;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.buton {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    background-color: #555;
+    padding: 8px 12px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    display: inline-block;
+    position: relative;
+}
+
+.buton:hover {
+    background-color: #666;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.buton:hover .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    background-color: #555;
+}
+
+.dropdown a:hover {
+    background-color: #666;
+}
+
+h1 {
+    margin: 3px 0;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li .buton {
+    display: inline-block;
+}
+.buton {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Style pour le bouton actif */
+.buton.active {
+    background-color: #2c3e50; /* Couleur de fond plus foncée */
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-weight: bold;
+    /* Optionnel : ajouter une bordure inférieure */
+    border-bottom: 3px solid #e74c3c;
+}
+
+/* Effet hover sur les boutons non actifs */
+.buton:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}

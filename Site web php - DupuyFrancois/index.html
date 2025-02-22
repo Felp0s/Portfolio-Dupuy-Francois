@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - François Dupuy</title>
+    <link rel="stylesheet" href="styles/Content.css">
+    <link rel="stylesheet" href="styles/Image.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/animated-background.css"> 
+    <link rel="stylesheet" href="styles/Header.css">
+
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="buton active">Accueil</a></li>
+                <li><a href="profil.html" class="buton">Profil</a></li>
+                <li><a href="parcours.html" class="buton">Parcours</a></li>
+                <li><a href="competences.html" class="buton">Mes competences</a></li>
+                <li><a href="contact.html" class="buton">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="clock" id="clock">00:00:00</div>
+
+    </header>
+   
+   
+    <div class="background"> </div>
+
+    <!-- Contenu principal du site -->
+    <div id="hero">
+        <div style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);">
+          <h1>François DUPUY</h1>
+          <p>ÉTUDIANT EN BTS SIO - OPTION SLAM</p>
+          <p><b>Bienvenue sur mon Portfolio</b></p>
+        </div>
+
+        <div class="map-container">
+            <!-- Image principale -->
+            <img src="Image/ImageMap.jpg" alt="imageMap" class="center img">
+    
+            <!-- Zones superposées -->
+            <a href="competences.html" class="highlight-zone zone1" title="competences"></a>
+            <a href="contact.html" class="highlight-zone zone2" title="contact"></a>
+            <a href="profil.html" class="highlight-zone zone3" title="profil"></a>
+            <a href="parcours.html" class="highlight-zone zone4" title="parcours"></a>
+
+
+
+        </div>
+
+   
+    </main>
+    
+    <footer>
+        <h4>&copy; 2025 Designed by DUPUY François</h4>
+    </footer>
+    <script src="Javascript/clock.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>  <!-- Ajoutez avant la fermeture du body -->
+    <script src="Javascript/particles-config.js"></script> 
+</body>
+</html>
+
+

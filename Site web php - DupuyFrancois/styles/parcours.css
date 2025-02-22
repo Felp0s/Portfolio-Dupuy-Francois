@@ -1,0 +1,98 @@
+.parcours-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 90vw; /* Utilise 90% de la largeur de la fenêtre */
+    max-width: 1800px; /* Augmente la largeur maximale */
+    margin: 100px auto 20px;
+}
+
+.section {
+    flex: 1;
+    min-width: 400px; /* Augmente la largeur minimum */
+    margin: 0 10px; /* Ajoute des marges latérales */
+}
+
+/* La section "Centres d'intérêt" prendra toute la largeur */
+.section:last-child {
+    width: 100%;
+    flex-basis: 100%;
+}
+
+@media (max-width: 900px) {
+    .section {
+        flex-basis: 100%; /* Sur mobile, chaque section prend toute la largeur */
+        min-width: unset; /* Retire la largeur minimum sur mobile */
+        margin: 10px 0; /* Ajuste les marges sur mobile */
+    }
+    
+    .parcours-container {
+        width: 95vw; /* Utilise plus de largeur sur mobile */
+    }
+}
+  
+  .parcours-container {
+            max-width: 1200px;
+            margin: 100px auto 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            border-left: 5px solid #007bff;
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #007bff;
+        }
+
+        .date {
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .etablissement {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .description {
+            color: #666;
+            margin-left: 15px;
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .interest-tag {
+            background: #e9ecef;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            color: #495057;
+        }

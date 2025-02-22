@@ -1,0 +1,33 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: colorChange 20s ease infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #7fb5ed; /* Bleu ciel plus doux */
+    }
+    20% {
+        background-color: #7ccaab; /* Vert sauge apaisant */
+    }
+    40% {
+        background-color: #eba5b3; /* Rose pêche */
+    }
+    60% {
+        background-color: #b491b7; /* Violet parme */
+    }
+    80% {
+        background-color: #eda77f; /* Bleu ciel */
+    }
+    100% {
+        background-color: #7fb5ed; /* Retour au bleu ciel */
+    }
+}
+
+
+

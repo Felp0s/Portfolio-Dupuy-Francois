@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /index.html
+Allow: /profil.html
+Allow: /parcours.html
+Allow: /competences.html
+Allow: /contact.html
+Disallow: /styles/
+Disallow: /Javascript/
+Disallow: /images/
+
+Sitemap: https://www.portfolio-francoisdupuy.fr/sitemap.xml

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez mes compétences en développement web et programmation - Portfolio de François Dupuy">
+    <title>Compétences - Portfolio François Dupuy</title>
+    <link rel="stylesheet" href="styles/Header.css">
+    <link rel="stylesheet" href="styles/Image.css">
+    <link rel="stylesheet" href="styles/stylesBoutonDiapo.css">
+    <link rel="stylesheet" href="styles/competences.css"> 
+    <link rel="stylesheet" href="styles/animated-background.css"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="buton">Accueil</a></li>
+                <li><a href="profil.html" class="buton">Profil</a></li>
+                <li><a href="parcours.html" class="buton">Parcours</a></li>
+                <li><a href="competences.html" class="buton active">Mes compétences</a></li>
+                <li><a href="contact.html" class="buton">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="clock" id="clock">00:00:00</div>
+    </header>
+
+
+    <section class="certifications" style="margin-top: 120px;">
+        <h2>Diplômes et Certifications</h2>
+        <div class="certification-grid">
+            <div class="certification-card">
+                <div class="certification-icon">🎓</div>
+                <h3>Baccalauréat STI2D</h3>
+                <p>Option SIN (Systèmes d'Information et Numérique)</p>
+                <p class="certification-date">2024</p>
+                <p class="certification-location">Lycée Maupertuis, Saint-Malo</p>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">📚</div>
+                <h3>BTS SIO SLAM</h3>
+                <p>En cours d'obtention</p>
+                <p class="certification-date">2024-2026</p>
+                <p class="certification-location">Lycée Saint-Sauveur, Redon</p>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">🔒</div>
+                <h3>Certification SecNum</h3>
+                <p>Sensibilisation à la cybersécurité</p>
+                <p class="certification-date">En préparation</p>
+                <p class="certification-location">ANSSI</p>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .certifications {
+            padding: 2rem;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .certifications h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 2rem;
+        }
+
+        .certification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .certification-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .certification-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .certification-card h3 {
+            color: #007bff;
+            margin-bottom: 0.5rem;
+        }
+
+        .certification-date {
+            color: #666;
+            font-style: italic;
+            margin: 0.5rem 0;
+        }
+
+        .certification-location {
+            color: #444;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .certification-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+
+    
+    <main class="main-content">
+        <h1>Mes Compétences Techniques</h1>
+        <!-- Diapo 1 -->
+        <div class="slideshow-container">
+            <div class="slide">
+                <h2 class="skill-title">HTML</h2>
+                <div class="skill-content">
+                    <img src="Image/Html.png" alt="Logo HTML5" class="skill-image">
+                    <div class="skill-details">
+                        <h3>Langage de balisage Web</h3>
+                    </div>
+                </div>
+            </div>
+        <!-- Diapo 2 -->
+            <div class="slide">
+                <h2 class="skill-title">CSS</h2>
+                <div class="skill-content">
+                    <img src="Image/Css.png" alt="Logo CSS3" class="skill-image">
+                    <div class="skill-details">
+                        <h3>Langage de mise en page Web</h3>
+                    </div>
+                </div>
+            </div>
+        <!-- Diapo 3 -->    
+            <div class="slide">
+                <h2 class="skill-title">JavaScript</h2>
+                <div class="skill-content">
+                    <img src="Image/JS-icon.png" alt="Logo JavaScript" class="skill-image">
+                    <div class="skill-details">
+                        <h3>Langage de programmation Web</h3>
+                    </div>
+                </div>
+            </div>
+        <!-- Diapo 4 -->
+            <div class="slide">
+                <h2 class="skill-title">Java</h2>
+                <div class="skill-content">
+                    <img src="Image/JAVA.png" alt="Logo Java" class="skill-image">
+                    <div class="skill-details">
+                        <h3>Langage de programmation</h3>
+                    </div>
+                </div>
+            </div>
+             <!-- Diapo 5 -->
+            <div class="slide">
+                <h2 class="skill-title">PHP</h2>
+                <div class="skill-content">
+                    <img src="Image/PHP.png" alt="Logo PHP" class="skill-image">
+                    <div class="skill-details">
+                        <h3>Langage de programmation principalement utilisé pour produire des pages WEB dynamiques via un serveur WEB, mais pouvant également fonctionner comme n'importe quel langage interprété de façon locale.</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diapo 6 -->
+            <div class="slide">
+                <h2 class="skill-title">Linux</h2>
+                <div class="skill-content">
+                    <img src="Image/Linux.png" alt="Logo Linux" class="skill-image">
+                    <div class="skill-details">
+                        <h3>Système d'exploitation open source</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diapo 7 -->
+            <div class="slide">
+                <h2 class="skill-title">Python</h2>
+                <div class="skill-content">
+                    <img src="Image/Python.png" alt="Logo Python" class="skill-image">
+                    <div class="skill-details">
+                        <h3>Langage de programmation</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Diapo 8 -->
+            <div class="slide">
+                <h2 class="skill-title">SolidWorks</h2>
+                <div class="skill-content">
+                    <img src="Image/SolidWorks.png" alt="Logo SolidWorks" class="skill-image">
+                    <div class="skill-details">
+                        <h3>Logiciel de CAO (conception assistée par ordinateur)</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <!-- Diapo 9 -->
+            <div class="slide">
+                <h2 class="skill-title">Cisco Packet Tracer</h2>
+                <div class="skill-content">
+                    <img src="Image/Cisco.png" alt="Logo Cisco Packet Tracer" class="skill-image">
+                    <div class="skill-details">
+                        <h3>Logiciel de simulation de réseaux</h3>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Diapo  -->
+             <div class="slide">
+                <h2 class="skill-title">SQL</h2>
+                <div class="skill-content">
+                    <img src="Image/SQL.png" alt="Logo SQL" class="skill-image">
+                    <div class="skill-details">
+                        <h3>Langage de requête structurée</h3>
+                    </div>
+                </div>
+            </div>
+
+
+
+            
+
+            <button class="prev" onclick="changeSlide(-1)" aria-label="Slide précédent">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)" aria-label="Slide suivant">&#10095;</button>
+        </div>
+
+        
+
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)" aria-label="Aller au slide 1"></span>
+            <span class="dot" onclick="currentSlide(2)" aria-label="Aller au slide 2"></span>
+            <span class="dot" onclick="currentSlide(3)" aria-label="Aller au slide 3"></span>
+            <span class="dot" onclick="currentSlide(4)" aria-label="Aller au slide 4"></span>
+            <span class="dot" onclick="currentSlide(5)" aria-label="Aller au slide 5"></span>
+            <span class="dot" onclick="currentSlide(6)" aria-label="Aller au slide 6"></span>
+            <span class="dot" onclick="currentSlide(7)" aria-label="Aller au slide 7"></span>
+            <span class="dot" onclick="currentSlide(8)" aria-label="Aller au slide 8"></span>   
+            <span class="dot" onclick="currentSlide(9)" aria-label="Aller au slide 9"></span>  
+            <span class="dot" onclick="currentSlide(10)" aria-label="Aller au slide 10"></span>     
+
+        </div>
+
+        <div style="margin-bottom: 200px;"></div>
+
+    <div class="background"></div>    
+    </main>
+
+    <footer>
+        <h4>&copy; 2025 Designed by DUPUY François</h4>
+    </footer>
+
+    <script src="Javascript/clock.js"></script>
+    <script src="Javascript/Slideshow.js"></script>
+
+</body>
+</html>
+
+
